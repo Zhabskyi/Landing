@@ -2,24 +2,16 @@ import React, { Component } from 'react'
 
 
 export class Label extends Component {
-
 	
 	render() {
-		let myClass;
-		if (!this.props.content) {
-			myClass='Content';
-		}
 		return (
-			<div className='Container'>
-				<span>
-					{this.props.head}
-				</span>
-				<div className={myClass}>
-					<span>
-						{this.props.content}
-					</span>
-				</div>
-
+			<div className='label'>
+				<h2 className='label__title'>
+					{this.props.title}
+				</h2>
+				{
+					this.props.content ? <div className='label__content'>{this.props.childres}</div> : null
+				}
 				<style jsx>{`
 					div > * {
 						margin: 0 15px;
