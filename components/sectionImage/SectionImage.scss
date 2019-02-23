@@ -1,0 +1,17 @@
+@import '../../styles/core';
+
+.section__image {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: ($overflowed-z-index)-3;
+	position: relative;
+	@include sm {
+		margin-top: 10px;
+	}
+	& > img {
+		width: 100%;
+		display: block;
+	}
+}

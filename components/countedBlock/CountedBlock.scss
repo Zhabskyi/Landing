@@ -1,0 +1,38 @@
+.counted-block {
+  position: relative;
+  padding-top: 50px !important;
+	padding-left: 0 !important; 
+}
+  @media screen and (max-width: 767px) {
+    .counted-block {
+			padding-left: 25px !important; 
+		} 
+	}
+  .counted-block__number {
+    font-family: 'Bariol', sans-serif;
+    font-weight: 700;
+    color: white;
+    font-size: 120px;
+    line-height: 100px;
+    position: absolute;
+    left: -24px;
+		top: -5px; 
+	}
+    @media screen and (max-width: 767px) {
+      .counted-block__number {
+				left: 0; 
+			} 
+		}
+  .counted-block__content {
+    position: relative;
+		z-index: 1; 
+	}
+  .counted-block__title {
+    font-family: 'Bariol', sans-serif;
+		font-size: 1.5rem; 
+	}
+		
+	.counted-block__title:empty {
+			display: none; 
+		}
+			

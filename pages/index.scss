@@ -1,2 +1,235 @@
 @import '../styles/core';
 @import '../styles/base';
+@import '../styles/fonts';
+
+header{
+	height: 60px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: $overflowed-z-index - 1;
+	width: 100%;
+	@include md {
+		height: 70px;
+	}
+}
+
+.container {
+	width: 100%;
+	flex: 1;
+	flex-direction: column;
+	padding-top: 60px;
+	min-height: 100vh;
+	position: relative;
+	@include md {
+		padding-top: 70px;
+	}
+}
+
+/*----------------First section---------------------*/
+.main-section {
+	background-color: #e2eded;
+	background-image: url(/static/images/background-empty.jpg);
+	background-position: top center;
+	transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+	height: 900px;
+	margin-bottom: 60px;
+	@include md {
+		height: auto;
+    max-height: inherit;
+    padding-top: 0;
+	}
+	@include sm {
+		background-color: #b1d9cf;
+    background-image: none;
+    background-size: cover;
+	}
+	&__corner-image {
+		right: 0;
+    top: 0;
+	}
+	&__description {
+		width: 50%;
+    max-width: 750px;
+    position: absolute;
+    top: 0;
+    font-size: 24px;
+    z-index: ($overflowed-z-index)-4;
+    padding-right: 10%;
+		margin-top: -12px;
+		@include md {
+			width: 100%;
+			top: 60px;
+		}
+		@include sm {
+			position: relative;
+			margin-top: 50px;
+			top: 0;
+			font-size: 24px;
+			padding-right: 0
+		}
+	}
+	&__text {
+		width: 80%;
+	}
+	&__photo-section {
+		position: absolute;
+    width: 40%;
+    top: 0;
+		right: 15%;
+		@include lg {
+			width: 50%;
+		}
+		@include md {
+			width: 70%;
+			position: relative;
+			right: inherit;
+			padding-top: 210px;
+			padding-bottom: 80px;
+			margin-left: 30%;
+			max-width: 500px;
+		}
+		@include sm {
+			width: 90%;
+			padding-top: 50px;
+			padding-bottom: 10px;
+			margin: 0 auto;
+		}
+		&__square {
+			width: 275px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: ($overflowed-z-index)-5;
+			@include lg {
+				transform: translate(0, -10%);
+			}
+			@include md {
+				display: none;
+			}
+		}
+		&__phone {
+			transform: translate(7%, 16%);
+			width: 100%;
+			right: 0;
+			@include lg {
+				transform: translate(7%, 0%);
+			}
+			@include sm {
+				width: 100%;
+				transform: none;
+			}
+		}
+	}
+	
+}
+
+/*----------------Second section---------------------*/
+.section-secondary {
+	background-color: #b1d9cf;
+}
+
+.action-block {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 0;
+	width: 80%;
+	align-items: center;
+	@include md {
+		position: relative;
+    top: inherit;
+    right: inherit;
+    transform: inherit;
+    margin: 0 auto
+	}
+}
+
+/*----------------Forth section---------------------*/
+
+.section-forth {
+	background-color: #e2eded;
+	&__corner-image {
+		top: -80px;
+    width: 26%;
+    left: 0;
+		right: inherit;
+		@include md {
+			transform: none;
+			left: 0;
+			top: 0;
+		}
+	}
+	&__content {
+		@include sm {
+			align-items: flex-start;
+			flex-direction: column-reverse;
+		}
+	}
+	&__heading {
+		margin-left: -21px;
+	}
+}
+
+/*---------------Fifth section-----------------------*/
+
+.section-fifth {
+	display: flex;
+	align-items: center;
+	height: 600px;
+	background-image: url(/static/images/radieschen_kasterl.jpg);
+	background-position: 30% center;
+	@include md {
+		height: 480px
+	}
+	@include sm {
+		height: 250px;
+	}
+	&__text {
+		color: white;
+		font-size: 120px;
+		@include sm {
+			font-size: 50px;
+		}
+	}
+	&__label {
+		width: 240px;
+    height: 240px;
+    font-family: 'Bariol', sans-serif;
+    font-size: 18px;
+		font-weight: 500;
+		position: absolute;
+    bottom: 0px;
+		right: 20px;
+		top: inherit;
+    box-shadow: none;
+		transform: translate(-40%, 40%) rotate(12deg) !important;
+			@include lg {
+				transform: translateY(40%) rotate(12deg) !important;
+			}
+			@include sm {
+				display: none;
+			}
+	}
+}
+
+/* ------------------Sixth section---------------------*/
+
+.section-sixth {
+	@include md {
+		padding-top: 100px;
+	}
+}
+
+/* ------------------Seventh section---------------------*/
+
+.section-seventh {
+	background-color: #deeaea;
+}
+
+/* ------------------Bottom section---------------------*/
+
+.section_bottom {
+	background-color: #a8d2c8;
+	font-size: 18px;
+}

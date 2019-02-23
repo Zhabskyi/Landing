@@ -1,0 +1,12 @@
+.footer {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	flex-direction: row;
+	flex-wrap: wrap;
+		&__link {
+			color: #15484c;
+			font-weight: 700;
+			padding: 10px 30px;
+		}
+	}

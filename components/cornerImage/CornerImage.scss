@@ -1,0 +1,20 @@
+@import '../../styles/core.scss';
+
+.corner-image {
+	width: 22%;
+	min-width: 230px;
+	position: absolute;
+	height: auto;
+	z-index: 1;
+	@include md {
+		min-width: 200px;
+	}
+	@include sm {
+		display: none;
+	}
+}
+
+.corner-image > img {
+	width: 100%;
+	display: block;
+}

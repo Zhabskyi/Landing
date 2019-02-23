@@ -1,10 +1,12 @@
+@import '../../styles/_mixins';
+
 .button {
     color: white;
     background-color: #f08663;
     padding: 0;
     font-family: 'bebas', sans-serif;
     font-size: 28px;
-    font-weight: 400;
+    font-weight: 500;
     border-radius: 8px;
     border: 2px solid transparent;
     text-align: center;
@@ -14,7 +16,15 @@
     padding-bottom: 8px;
     padding-left: 50px;
     padding-right: 50px;
-    transition: .15s ease-in-out;
+		transition: .15s ease-in-out;
+		@include md {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		@include sm {
+			width: 100%;
+			font-size: 25px;
+		}
 }
 
 .button:hover {
